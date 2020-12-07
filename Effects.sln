@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Effects", "Effects\Effects.csproj", "{5869CA79-BBF6-4EFF-934C-7F83BE48DE13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5869CA79-BBF6-4EFF-934C-7F83BE48DE13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5869CA79-BBF6-4EFF-934C-7F83BE48DE13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5869CA79-BBF6-4EFF-934C-7F83BE48DE13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5869CA79-BBF6-4EFF-934C-7F83BE48DE13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D5AD76A-5303-41CE-91D8-DFF0D7C260DD}
+	EndGlobalSection
+EndGlobal
