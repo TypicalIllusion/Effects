@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Config.cs" />
     <Compile Include="Effects.cs" />
+    <Compile Include="Enums\PlayerEffects.cs" />
     <Compile Include="Handlers\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
