@@ -14,14 +14,15 @@ namespace Effects
         [Description("Is the plugin enabled?")]
         public bool IsEnabled { get; set; } = true;
 
-        [Description("How long speed?")]
+        [Description("How long is the speed?")]
         public float Speed { get; set; } = 5f;
         [Description("How many cokes?")]
-        public byte AmountCokes { get; set; } = 1;
+        public byte AmountOfCokes { get; set; } = 1;
         [Description("What should the speed message be?")]
-        public string SpeedMessage { get; set; } = "You have speed";
+        public string SpeedMessage { get; set; } = $"You have speed";
 
-        [Description("What SCPs do you not want to get the effects?")]
+        [Description("What SCPs do you not want to get the effects (remove the ones you want to have the effects)?")]
+
         public List<RoleType> NotScpEffect { get; private set; } = new List<RoleType>()
             { RoleType.Scp173,
             RoleType.Scp049,
@@ -30,7 +31,7 @@ namespace Effects
             RoleType.Scp93989,
             RoleType.Scp0492,
             };
-        [Description("What effects do you want?")]
+        [Description("What effect do you want?")]
         public PlayerEffects EffectApplied { get; set; } = Scp207;
     }
 }

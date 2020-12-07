@@ -43,7 +43,7 @@ namespace Effects.Handlers
             {
                 case PlayerEffects.Scp207:
                     player.EnableEffect<Scp207>(Singleton.Config.Speed);
-                    player.ReferenceHub.playerEffectsController.ChangeEffectIntensity<Scp207>(Singleton.Config.AmountCokes);
+                    player.ReferenceHub.playerEffectsController.ChangeEffectIntensity<Scp207>(Singleton.Config.AmountOfCokes);
                     break;
                 case PlayerEffects.Scp268:
                     player.EnableEffect<Scp268>(Singleton.Config.Speed);
