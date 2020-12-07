@@ -1,6 +1,4 @@
-﻿
-
-namespace Effects.Enums
+﻿namespace Effects.Enums
 {
     public enum PlayerEffects
     {

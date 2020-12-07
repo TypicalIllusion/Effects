@@ -31,7 +31,11 @@ namespace Effects
             RoleType.Scp93989,
             RoleType.Scp0492,
             };
-        [Description("What effect do you want?")]
-        public PlayerEffects EffectApplied { get; set; } = Scp207;
+        [Description("What effects do you want?")]
+        public List<PlayerEffects> PE = new List<PlayerEffects>()
+
+        { Scp207,
+          Scp268,
+        };
     }
 }

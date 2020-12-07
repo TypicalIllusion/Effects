@@ -1,5 +1,4 @@
 ﻿using Exiled.Events.EventArgs;
-using Exiled.API.Features;
 using Exiled.API.Extensions;
 
 using EPlayer = Exiled.API.Features.Player;
@@ -25,7 +24,10 @@ namespace Effects.Handlers
                     return;
                 Timing.CallDelayed(1.0f, () =>
                 {
-                    PlayerEffect(Singleton.Config.EffectApplied, ev.Player);
+                    foreach (PlayerEffects effect in Singleton.Config.PE)
+                    {
+                        PlayerEffect(effect, ev.Player);
+                    }
                     ev.Player.Broadcast(10, Singleton.Config.SpeedMessage);
                 });
             }
