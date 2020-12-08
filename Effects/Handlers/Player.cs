@@ -24,11 +24,11 @@ namespace Effects.Handlers
                     return;
                 Timing.CallDelayed(1.0f, () =>
                 {
-                    foreach (PlayerEffects effect in Singleton.Config.PE)
+                    foreach (PlayerEffects effect in Singleton.Config.TheEffects)
                     {
                         PlayerEffect(effect, ev.Player);
                     }
-                    ev.Player.Broadcast(10, Singleton.Config.SpeedMessage);
+                    ev.Player.Broadcast(7, Singleton.Config.Broadcast);
                 });
             }
         }
