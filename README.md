@@ -3,12 +3,13 @@ Scps get effects on spawn
 # Config Options
 | Name | Type | Description | Default |
 | --- | --- | --- | --- |
-| `is_enabled` | bool | Toggles the plugin | true |
+| `IsEnabled` | bool | Toggles the plugin | true |
 | `speed`| float | how long does it last? | 5 |
-| `amount`| byte | Amount of cokes | 1 |
-| `SpeedMessage` | string | message on spawning | "You have been removed from afk players.\nYou may now respawn." |
-| `NotScpEffect` | list | what scps dont get the effect | all dont get effect |
-| `EffectApplied`| string? | What effect do you want? 268/207 | 207 |
+| `AmountOfCokes`| byte | Amount of cokes | 1 |
+| `Broadcast` | string | the message | "You have speed and invisibility!" |
+| `NotScpEffect` | list | what scps WONT the effects work on | all of them |
+| `TheEffects` | list | list of effects. 2 right now| Scp207, Scp268 |
+
 
 MORE EFFECTS COMING SOON MAYBE.
 This plugin requires https://github.com/galaxy119/EXILED/releases/tag/2.1.19.
