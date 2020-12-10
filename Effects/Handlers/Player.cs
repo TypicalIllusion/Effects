@@ -1,6 +1,5 @@
 ﻿using Exiled.Events.EventArgs;
 using Exiled.API.Extensions;
-
 using EPlayer = Exiled.API.Features.Player;
 
 using MEC;
@@ -8,32 +7,39 @@ using MEC;
 using CustomPlayerEffects;
 
 using static Effects.Effects;
-
 using Effects.Enums;
 
 namespace Effects.Handlers
 {
     class Player
     {
-
         public void OnChangingRoles(ChangingRoleEventArgs ev)
         {
             if (ev.NewRole.GetTeam() == Team.SCP)
             {
                 if (Singleton.Config.NotScpEffect.Contains(ev.NewRole))
                     return;
+                /// </summary>
+                /// Delay so they get effect
+                /// </summary>
                 Timing.CallDelayed(1.0f, () =>
                 {
                     foreach (PlayerEffects effect in Singleton.Config.TheEffects)
                     {
                         PlayerEffect(effect, ev.Player);
                     }
-                    ev.Player.Broadcast(7, Singleton.Config.Broadcast);
+                    /// </summary>
+                    /// Broadcast message
+                    /// </summary>
+                    ev.Player.Broadcast(Singleton.Config.Broadcast.Duration, Singleton.Config.Broadcast.Content);
                 });
             }
         }
         public void OnHurting(HurtingEventArgs ev)
         {
+            /// </summary>
+            /// Scps dont take coke damage
+            /// </summary>
             if (Singleton.Config.NotScpEffect.Contains(ev.Target.Role) && ev.DamageType == DamageTypes.Scp207)
             {
                 ev.Amount = 0;
@@ -41,6 +47,9 @@ namespace Effects.Handlers
         }
         public void PlayerEffect(PlayerEffects effects, EPlayer player)
         {
+            /// <summary>
+            /// Effects
+            /// </summary>
             switch (effects)
             {
                 case PlayerEffects.Scp207:
@@ -48,8 +57,10 @@ namespace Effects.Handlers
                     player.ReferenceHub.playerEffectsController.ChangeEffectIntensity<Scp207>(Singleton.Config.AmountOfCokes);
                     break;
                 case PlayerEffects.Scp268:
-                    player.EnableEffect<Scp268>(Singleton.Config.Speed);
-                    player.ReferenceHub.playerEffectsController.ChangeEffectIntensity<Scp207>(15);
+                    player.EnableEffect<Scp268>(15f);
+                    break;
+                case PlayerEffects.Blinded:
+                    player.EnableEffect<Blinded>(Singleton.Config.Blind);
                     break;
                 default:
                     break;
