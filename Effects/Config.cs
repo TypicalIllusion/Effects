@@ -20,26 +20,26 @@ namespace Effects
         [Description("How long is the speed?")]
         public float Speed { get; set; } = 5f;
         [Description("How long is the speed?")]
-        /// </summary>
+        /// <summary>
         /// Gets coke ammount
         /// </summary>
         public byte AmountOfCokes { get; set; } = 1;
         [Description("How long are they blinded for?")]
         public int Blind { get; set; } = 5;
         [Description("What is the broadcast message?")]
-        /// </summary>
+        /// <summary>
         /// Gets broadcasts
         /// </summary>
 
         public BBroadcast Broadcast = new BBroadcast($"You have speed for and invisibility", 7);
-        /// </summary>
+        /// <summary>
         /// Gets broadcast's length
         /// </summary>
         [Description("What is the broadcast length?")]
         public ushort BroadcastLength { get; set; } = 7;
 
         [Description("What SCPs do you not want to get the effects (remove the ones you want to have the effects)?")]
-        /// </summary>
+        /// <summary>
         /// Scps that dont get effects
         /// </summary>
         public List<RoleType> NotScpEffect { get; private set; } = new List<RoleType>()
@@ -51,7 +51,7 @@ namespace Effects
             RoleType.Scp0492,
             };
         [Description("What effects do you want?")]
-        /// </summary>
+        /// <summary>
         /// Gets effects
         /// </summary>
         public List<PlayerEffects> TheEffects { get; private set; } = new List<PlayerEffects>()

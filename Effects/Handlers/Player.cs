@@ -19,7 +19,7 @@ namespace Effects.Handlers
             {
                 if (Singleton.Config.NotScpEffect.Contains(ev.NewRole))
                     return;
-                /// </summary>
+                /// <summary>
                 /// Delay so they get effect
                 /// </summary>
                 Timing.CallDelayed(1.0f, () =>
@@ -28,7 +28,7 @@ namespace Effects.Handlers
                     {
                         PlayerEffect(effect, ev.Player);
                     }
-                    /// </summary>
+                    /// <summary>
                     /// Broadcast message
                     /// </summary>
                     ev.Player.Broadcast(Singleton.Config.Broadcast.Duration, Singleton.Config.Broadcast.Content);
@@ -37,7 +37,7 @@ namespace Effects.Handlers
         }
         public void OnHurting(HurtingEventArgs ev)
         {
-            /// </summary>
+            /// <summary>
             /// Scps dont take coke damage
             /// </summary>
             if (Singleton.Config.NotScpEffect.Contains(ev.Target.Role) && ev.DamageType == DamageTypes.Scp207)
