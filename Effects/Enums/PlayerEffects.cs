@@ -8,5 +8,6 @@
         Scp207,
         Scp268,
         Blinded,
+        Sinkhole,
     }
 }

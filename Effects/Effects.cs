@@ -13,7 +13,7 @@ namespace Effects
         public override string Name { get; } = "Effects";
         public override string Author { get; } = "TypicalIllusion";
         public override Version Version { get; } = new Version(2, 0, 0);
-        public override Version RequiredExiledVersion { get; } = new Version(2, 1, 18);
+        public override Version RequiredExiledVersion { get; } = new Version(2, 1, 19);
         public override string Prefix { get; } = "Effects";
 
         public static Effects Instance;
