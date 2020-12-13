@@ -20,7 +20,7 @@ namespace Effects.Handlers
                 /// <summary>
                 /// If scps are in the list, then DONT add effects
                 /// </summary>
-                if (Singleton.Config.BlacklistedScps.Contains(ev.NewRole))
+                if (!Singleton.Config.WhitelistedRoles.Contains(ev.NewRole))
                     return;
                 /// <summary>
                 /// Delay so they get effect
@@ -43,7 +43,7 @@ namespace Effects.Handlers
             /// <summary>
             /// Scps dont take coke damage
             /// </summary>
-            if (!Singleton.Config.BlacklistedScps.Contains(ev.Target.Role) && ev.DamageType == DamageTypes.Scp207)
+            if (Singleton.Config.WhitelistedRoles.Contains(ev.Target.Role) && ev.DamageType == DamageTypes.Scp207)
             {
                 ev.Amount = 0f;
             }
