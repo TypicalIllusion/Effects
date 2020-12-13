@@ -44,13 +44,19 @@ namespace Effects
         /// <summary>
         /// Scps that dont get effects
         /// </summary>
-        public List<RoleType> BlacklistedScps { get; private set; } = new List<RoleType>()
+        public List<RoleType> WhitelistedRoles { get; private set; } = new List<RoleType>()
             { RoleType.Scp173,
             RoleType.Scp049,
             RoleType.Scp106,
             RoleType.Scp93953,
             RoleType.Scp93989,
             RoleType.Scp0492,
+            RoleType.ClassD,
+            RoleType.ChaosInsurgency,
+            RoleType.NtfCadet,
+            RoleType.NtfLieutenant,
+            RoleType.NtfScientist,
+            RoleType.NtfCommander,
             };
         [Description("What effects do you want?")]
         /// <summary>
