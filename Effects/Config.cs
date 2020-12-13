@@ -45,7 +45,7 @@ namespace Effects
         /// Scps that dont get effects
         /// </summary>
         public List<RoleType> WhitelistedRoles { get; private set; } = new List<RoleType>()
-            { RoleType.Scp17 3,
+            { RoleType.Scp173,
             RoleType.Scp049,
             RoleType.Scp106,
             RoleType.Scp93953,
