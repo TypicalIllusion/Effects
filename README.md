@@ -4,12 +4,12 @@ Scps get effects on spawn
 | Name | Type | Description | Default |
 | --- | --- | --- | --- |
 | `IsEnabled` | bool | Toggles the plugin | true |
-| `speed`| float | How long does it last? | 5 |
+| `Speed`| float | How long does it last? | 5 |
 | `AmountOfCokes`| byte | Amount of cokes | 1 |
 | `SinkholeTime` | int | How long do thye have sinkhole | 5 |
 | `BlindTime` | int | How long do they have blinded | 5 |
 | `Broadcast` | string | The message, duration, and type | "You have speed, invisibility, blindness, and sinkhole." |
-| `BlacklistedSCPs` | list | What scps WONT the effects work on | all of them |
+| `WhitelistedSCPs` | list | What roles WILL the effects work on | all of them |
 | `TheEffects` | list | List of effects. | Scp207, Scp268, Blinded, Sinkhole |
 
 

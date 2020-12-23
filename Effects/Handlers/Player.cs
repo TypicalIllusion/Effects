@@ -17,32 +17,20 @@ namespace Effects.Handlers
         {
             if (ev.NewRole.GetTeam() == Team.SCP)
             {
-                /// <summary>
-                /// If scps are in the list, then DONT add effects
-                /// </summary>
                 if (!Singleton.Config.WhitelistedRoles.Contains(ev.NewRole))
                     return;
-                /// <summary>
-                /// Delay so they get effect
-                /// </summary>
                 Timing.CallDelayed(1.0f, () =>
                 {
                     foreach (PlayerEffects effect in Singleton.Config.TheEffects)
                     {
                         PlayerEffect(effect, ev.Player);
                     }
-                    /// <summary>
-                    /// Broadcast message
-                    /// </summary>
                     ev.Player.Broadcast(Singleton.Config.Broadcast.Duration, Singleton.Config.Broadcast.Content);
                 });
             }
         }
         public void OnHurting(HurtingEventArgs ev)
         {
-            /// <summary>
-            /// Scps dont take coke damage
-            /// </summary>
             if (Singleton.Config.WhitelistedRoles.Contains(ev.Target.Role) && ev.DamageType == DamageTypes.Scp207)
             {
                 ev.Amount = 0f;
@@ -50,9 +38,6 @@ namespace Effects.Handlers
         }
         public void PlayerEffect(PlayerEffects effects, EPlayer player)
         {
-            /// <summary>
-            /// Effects
-            /// </summary>
             switch (effects)
             {
                 case PlayerEffects.Scp207:
