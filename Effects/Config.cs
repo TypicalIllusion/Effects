@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 using Exiled.API.Interfaces;
@@ -26,6 +26,12 @@ namespace Effects
         public BBroadcast Broadcast { get; set; } = new BBroadcast($"You have speed, invisibility, blindness, and sinkhole.", 7);
 
         [Description("What SCPs do you not want to get the effects? (add the ones you want to have the effects)")]
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Scps that dont get effects
+        /// </summary>
+>>>>>>> fe3ac2ce6931abaecfc75ec49cdeec0f131e94ef
         public List<RoleType> WhitelistedRoles { get; private set; } = new List<RoleType>()
             { RoleType.Scp173,
             RoleType.Scp049,
